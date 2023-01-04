@@ -1,0 +1,32 @@
+import random
+
+# list of topics
+topics = ['history', 'math', 'science', 'english']
+
+def get_question(topic):
+  # dictionary of questions for each topic
+  questions = {
+    'history': ['Who was the first president of the United States?',
+                'When did the American Revolutionary War take place?'],
+    'math': ['What is 2+2?',
+             'What is the square root of 144?'],
+    'science': ['What is the chemical symbol for hydrogen?',
+                'What is the capital of molecules?'],
+    'english': ['What is the past tense of the verb "to be"?',
+                'What is a noun?']
+  }
+  # get the list of questions for the given topic
+  topic_questions = questions[topic]
+  # return a random question from the list
+  return random.choice(topic_questions)
+
+def main():
+  # get the topic from the user
+  topic = input('Enter a topic: ')
+  # get the question for the topic
+  question = get_question(topic)
+  # print the question
+  print(question)
+
+if __name__ == '__main__':
+  main()
